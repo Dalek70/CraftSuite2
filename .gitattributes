@@ -1,0 +1,8 @@
+# Ensure consistent line endings
+* text=auto
+
+# Mark binaries so Git doesn’t try to diff them
+*.png binary
+*.jpg binary
+*.jar binary
+*.exe binary
