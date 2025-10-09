@@ -1,9 +1,6 @@
 package me.dalek70.craftsuite2;
 
-import me.dalek70.craftsuite2.commands.CommandBlocker;
-import me.dalek70.craftsuite2.commands.Fly;
-import me.dalek70.craftsuite2.commands.Flyspeed;
-import me.dalek70.craftsuite2.commands.Ping;
+import me.dalek70.craftsuite2.commands.*;
 
 import static org.mineacademy.fo.remain.Remain.registerCommand;
 import static org.mineacademy.fo.Common.registerEvents;
