@@ -10,9 +10,11 @@ public class Registering {
 		registerCommand(new Fly());
 		registerCommand(new Flyspeed());
 		registerCommand(new Ping());
+		registerCommand(new Back());
 	}
 
 	public static void registerEventsStartup() {
 		registerEvents(new CommandBlocker());
+		registerEvents(new BackLocationSaver());
 	}
 }
