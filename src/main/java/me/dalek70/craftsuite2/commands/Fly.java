@@ -26,13 +26,13 @@ public class Fly extends SimpleCommand {
 				playerToSetFly.setFlying(!playerToSetFly.isFlying());
 				tell((Color.orange + (!playerToSetFly.isFlying() ? "Enabled flying for " : "Disabled flying for ") + Color.aqua + playerToSetFly.getName() + Color.orange + "."));
 			} else {
-				tell("That player does not exist.");
+				tell(Color.darkRed + "Error: " + Color.red + "That player does not exist.");
 			}
 		} else if(args.length == 0) {
 			commandSender.setFlying(!commandSender.isFlying());
 			tell(Color.orange + "Flying set to " + Color.aqua + commandSender.isFlying());
 		} else {
-			tell("Too many arguments.");
+			tell(Color.darkRed + "Error: " + Color.red + "Too many arguments.");
 		}
 	}
 }

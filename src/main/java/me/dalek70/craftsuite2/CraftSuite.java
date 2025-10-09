@@ -1,5 +1,6 @@
 package me.dalek70.craftsuite2;
 
+import me.dalek70.craftsuite2.commands.CommandBlocker;
 import org.mineacademy.fo.plugin.SimplePlugin;
 
 public final class CraftSuite extends SimplePlugin {
@@ -7,7 +8,7 @@ public final class CraftSuite extends SimplePlugin {
 	protected void onPluginStart() {
 		// try to register the commands and if it fails print a message and catch the error.
 		try {
-			Registering.registerCommands();
+			Registering.registerCommandsStartup();
 		} catch (Exception e) {
 			System.out.println("Oh no! There was a error while registering the commands!");
 			e.printStackTrace();
@@ -15,11 +16,13 @@ public final class CraftSuite extends SimplePlugin {
 
 		// try to register the events and if it fails print a message and catch the error.
 		try {
-			Registering.registerEvents();
+			Registering.registerEventsStartup();
 		} catch (Exception e) {
 			System.out.println("Oh no! There was a error while registering the events!");
 			e.printStackTrace();
 		}
+
+		CommandBlocker.loadBlockedCommands();
 	}
 
 	/**
